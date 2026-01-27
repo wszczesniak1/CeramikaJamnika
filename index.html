@@ -39,12 +39,12 @@
         "postalCode": "50-001",
         "addressCountry": "PL"
       },
-      "logo": "https://www.jamniczaart.pl/logo.png",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnxPk7PVTZ6xph0xLBXWvlyTOsNfjY6uU_fQ&s",
       "priceRange": "$$"
     }
     </script>
 
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60'%3E%3Cpath fill='%238D5524' d='M92.5 23.3c-2.1-2.8-5.6-3.9-8.7-3.2-2.4.5-4.8 1.5-7 2.3-4.3 1.5-8.9 2.6-13.5 2.6H36.2c-6.3 0-11.7-2.6-15.6-7.1-2.7-3.1-7-4.7-11-2.9-4.1 1.8-6.3 6-5.9 10.3v15.5c.2 2.5 2.2 4.5 4.7 4.5h4.9v8.2c0 2.5 2 4.5 4.5 4.5s4.5-2 4.5-4.5v-8.2h30.5v8.2c0 2.5 2 4.5 4.5 4.5s4.5-2 4.5-4.5v-8.2h9.4c3 0 5.4-2.4 5.4-5.4v-5.8c2.3.8 4.9 1.2 7.1.1 2.2-1.1 3.7-3.4 3.5-5.8-.1-3.1-2.6-5.8-5.7-5.9z'/%3E%3C/svg%3E">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnxPk7PVTZ6xph0xLBXWvlyTOsNfjY6uU_fQ&s">
 
     <style>
         :root {
@@ -83,10 +83,12 @@
             text-decoration: none;
             color: var(--primary-color);
         }
+        /* STYL DLA NOWEGO LOGO W NAGŁÓWKU */
         .logo-img {
-            height: 50px;
+            height: 60px; /* Nieco większe logo */
             width: auto;
             margin-right: 15px;
+            border-radius: 5px; /* Lekkie zaokrąglenie rogów zdjęcia */
         }
         .logo-text {
             font-size: 1.5rem;
@@ -103,7 +105,7 @@
             font-weight: 600;
         }
         
-        /* ZMODYFIKOWANA SEKCJA HERO - BRĄZOWY PASEK */
+        /* SEKCJA HERO Z NOWYM TŁEM (KONTURY JAMNIKÓW) */
         .hero {
             background-color: var(--primary-color);
             color: white;
@@ -111,14 +113,12 @@
             padding: 4rem 1rem;
             position: relative;
             
-            /* TŁO Z KONTURAMI JAMNIKÓW */
-            /* Używamy SVG jako tła, kolor linii czarny (%23000000), opacity 0.2 dla subtelności */
+            /* Tło SVG inline: czarne kontury (%23000000), bez wypełnienia (fill='none'), niska przezroczystość (opacity='0.2') */
             background-image: url("data:image/svg+xml,%3Csvg width='120' height='80' viewBox='0 0 100 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M92.5 23.3c-2.1-2.8-5.6-3.9-8.7-3.2-2.4.5-4.8 1.5-7 2.3-4.3 1.5-8.9 2.6-13.5 2.6H36.2c-6.3 0-11.7-2.6-15.6-7.1-2.7-3.1-7-4.7-11-2.9-4.1 1.8-6.3 6-5.9 10.3v15.5c.2 2.5 2.2 4.5 4.7 4.5h4.9v8.2c0 2.5 2 4.5 4.5 4.5s4.5-2 4.5-4.5v-8.2h30.5v8.2c0 2.5 2 4.5 4.5 4.5s4.5-2 4.5-4.5v-8.2h9.4c3 0 5.4-2.4 5.4-5.4v-5.8c2.3.8 4.9 1.2 7.1.1 2.2-1.1 3.7-3.4 3.5-5.8-.1-3.1-2.6-5.8-5.7-5.9z' fill='none' stroke='%23000000' stroke-width='1.5' opacity='0.2'/%3E%3C/svg%3E");
-            background-size: 120px 80px; /* Rozmiar powtarzającego się kafelka */
+            background-size: 120px 80px;
         }
         
         .hero h1, .hero p {
-            /* Dodajemy cień pod tekstem, żeby był czytelny na tle wzorzystym */
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
             position: relative;
             z-index: 2;
@@ -206,10 +206,10 @@
     <header>
         <nav>
             <a href="/" class="logo-container">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60'%3E%3Cpath fill='%238D5524' d='M92.5 23.3c-2.1-2.8-5.6-3.9-8.7-3.2-2.4.5-4.8 1.5-7 2.3-4.3 1.5-8.9 2.6-13.5 2.6H36.2c-6.3 0-11.7-2.6-15.6-7.1-2.7-3.1-7-4.7-11-2.9-4.1 1.8-6.3 6-5.9 10.3v15.5c.2 2.5 2.2 4.5 4.7 4.5h4.9v8.2c0 2.5 2 4.5 4.5 4.5s4.5-2 4.5-4.5v-8.2h30.5v8.2c0 2.5 2 4.5 4.5 4.5s4.5-2 4.5-4.5v-8.2h9.4c3 0 5.4-2.4 5.4-5.4v-5.8c2.3.8 4.9 1.2 7.1.1 2.2-1.1 3.7-3.4 3.5-5.8-.1-3.1-2.6-5.8-5.7-5.9z'/%3E%3C/svg%3E" 
-                     alt="Logo JamniczaArt - sylwetka jamnika" 
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnxPk7PVTZ6xph0xLBXWvlyTOsNfjY6uU_fQ&s" 
+                     alt="Logo JamniczaArt - Jamnik" 
                      class="logo-img"
-                     width="100" height="60">
+                     width="60" height="60">
                 <span class="logo-text">JamniczaArt</span>
             </a>
             <ul>
