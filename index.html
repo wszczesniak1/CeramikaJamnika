@@ -3,71 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ceramika Bolesławiecka - Ręcznie Malowane Naczynia i Sklep Online</title>
     
-    <meta name="description" content="Oryginalna ceramika bolesławiecka prosto z manufaktury. Oferujemy ręcznie malowane kubki, talerze i zestawy obiadowe. Tradycyjne wzory i najwyższa jakość.">
+    <title>Ceramika z Jamnikami - Ręcznie Robione Kubki i Miski | JamniczaArt</title>
     
+    <meta name="description" content="Odkryj unikalną ceramikę z motywem jamnika. Ręcznie malowane kubki, miski i figurki. Polska produkcja handmade. Idealny prezent dla miłośnika psów. Sprawdź!">
+    
+    <meta name="keywords" content="ceramika z jamnikiem, kubek z jamnikiem, rękodzieło, prezent dla psiarza, ceramika handmade, miski dla psa">
+    
+    <link rel="canonical" href="https://www.jamniczaart.pl/">
+
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Ceramika z Jamnikami | JamniczaArt">
+    <meta property="og:description" content="Najpiękniejsza ręcznie robiona ceramika dla fanów jamników. Zobacz naszą nową kolekcję!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://www.jamniczaart.pl/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pl_PL">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ceramika z Jamnikami | JamniczaArt">
+    <meta name="twitter:description" content="Ręcznie robione kubki i talerze z motywem jamnika.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1200&q=80">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "JamniczaArt",
+      "image": "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1200&q=80",
+      "description": "Sklep z ręcznie robioną ceramiką z motywem jamników.",
+      "telephone": "+48 123 456 789",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Ceramiczna 10",
+        "addressLocality": "Wrocław",
+        "postalCode": "50-001",
+        "addressCountry": "PL"
+      },
+      "priceRange": "$$"
+    }
+    </script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; max-width: 1200px; margin: 0 auto; }
-        header { border-bottom: 2px solid #004d99; padding-bottom: 20px; margin-bottom: 20px; }
-        h1, h2, h3 { color: #004d99; }
-        nav ul { list-style-type: none; padding: 0; }
-        nav ul li { display: inline; margin-right: 15px; }
-        section { margin-bottom: 30px; }
-        .faq-item { background-color: #f9f9f9; padding: 15px; margin-bottom: 10px; border-left: 5px solid #004d99; }
+        :root {
+            --primary-color: #8D5524; /* Kolor jamniczy */
+            --secondary-color: #Fdfbf7;
+            --text-color: #333;
+            --accent-color: #C68642;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        /* Nawigacja */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Kontener główny */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        /* Produkty */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 1.5rem;
+        }
+        .product-info h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary-color);
+        }
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* Sekcja SEO Text */
+        .seo-content {
+            margin-top: 4rem;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        .footer-content p {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Oryginalna Ceramika Bolesławiecka</h1>
         <nav>
+            <div class="logo">
+                <strong style="font-size: 1.5rem; color: var(--primary-color);">JamniczaArt</strong>
+            </div>
             <ul>
-                <li><a href="#oferta">Nasza Oferta</a></li>
-                <li><a href="#o-nas">O Manufakturze</a></li>
-                <li><a href="#faq">Pytania i Odpowiedzi (FAQ)</a></li>
+                <li><a href="#sklep">Sklep</a></li>
+                <li><a href="#o-nas">O nas</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="o-nas">
-            <h2>Dlaczego warto wybrać nasze wyroby?</h2>
+    <section class="hero">
+        <h1>Ręcznie Robiona Ceramika z Jamnikami</h1>
+        <p>Unikalne wzory dla miłośników długich psów i dobrej kawy.</p>
+        <a href="#sklep" class="btn" style="background-color: white; color: var(--primary-color);">Zobacz kolekcję</a>
+    </section>
+
+    <main id="sklep">
+        <div class="breadcrumbs" style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">
+            <a href="/">Strona główna</a> > <span aria-current="page">Sklep z ceramiką</span>
+        </div>
+
+        <h2 style="text-align: center; color: var(--primary-color);">Nasze bestsellery</h2>
+        
+        <div class="products-grid">
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=500&q=80" 
+                     alt="Ceramiczny kubek w kolorze beżowym z ręcznie malowanym jamnikiem" 
+                     width="500" height="350"
+                     loading="lazy">
+                <div class="product-info">
+                    <h3>Kubek "Długi Poranek"</h3>
+                    <p>Pojemny kubek 400ml, idealny na kawę. Motyw jamnika szorstkowłosego.</p>
+                    <span class="price">89,00 PLN</span>
+                    <br>
+                    <a href="#" class="btn">Dodaj do koszyka</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=500&q=80" 
+                     alt="Ceramiczna miska dla psa z napisem i grafiką jamnika" 
+                     width="500" height="350"
+                     loading="lazy">
+                <div class="product-info">
+                    <h3>Miska "Jamniczy Apetyt"</h3>
+                    <p>Stabilna, ciężka miska ceramiczna dla psa. Łatwa do mycia.</p>
+                    <span class="price">65,00 PLN</span>
+                    <br>
+                    <a href="#" class="btn">Dodaj do koszyka</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=500&q=80" 
+                     alt="Zestaw talerzy ceramicznych z motywem jamnika długowłosego" 
+                     width="500" height="350"
+                     loading="lazy">
+                <div class="product-info">
+                    <h3>Talerzyk Deserowy "Sausage Dog"</h3>
+                    <p>Idealny talerzyk na ciasto. Ręcznie szkliwiony.</p>
+                    <span class="price">45,00 PLN</span>
+                    <br>
+                    <a href="#" class="btn">Dodaj do koszyka</a>
+                </div>
+            </article>
+        </div>
+
+        <section class="seo-content" id="o-nas">
+            <h2>Dlaczego warto wybrać naszą ceramikę z jamnikami?</h2>
             <p>
-                Nasza ceramika bolesławiecka to połączenie wielowiekowej tradycji z nowoczesnym wzornictwem. 
-                Każdy produkt jest formowany i zdobiony ręcznie przy użyciu unikalnej metody stempelkowej. 
-                Dzięki wysokiej temperaturze wypału, nasze naczynia są nie tylko piękne, ale i niezwykle trwałe.
+                Nasza pracownia <strong>Jamnicza Ceramika</strong> to miejsce, gdzie miłość do gliny łączy się z pasją do psów. 
+                Każdy <em>kubek z jamnikiem</em> jest toczony na kole garncarskim, a następnie ręcznie malowany, co sprawia, że nie ma dwóch identycznych produktów.
             </p>
-        </section>
-
-        <section id="oferta">
-            <h2>Nasze produkty</h2>
-            <ul>
-                <li>Kubki i filiżanki w tradycyjne wzory</li>
-                <li>Zestawy obiadowe i serwisy kawowe</li>
-                <li>Miski, półmiski i naczynia do zapiekania</li>
-            </ul>
-        </section>
-
-        <section id="faq">
-            <h2>Często zadawane pytania (FAQ)</h2>
-            <p>Poniżej znajdziesz odpowiedzi na najczęstsze pytania dotyczące użytkowania ceramiki.</p>
-            
-            <article class="faq-item">
-                <h3>Czy ceramikę bolesławiecką można myć w zmywarce?</h3>
-                <p>Tak, wszystkie nasze naczynia są pokryte szkliwem odpornym na wysokie temperatury i detergenty, dzięki czemu można je bezpiecznie myć w zmywarkach.</p>
-            </article>
-
-            <article class="faq-item">
-                <h3>Czy naczynia nadają się do piekarnika i mikrofali?</h3>
-                <p>Oczywiście. Kamionka z Bolesławca jest wypalana w bardzo wysokich temperaturach, co sprawia, że doskonale nadaje się do zapiekania potraw w piekarniku oraz podgrzewania w kuchenkach mikrofalowych.</p>
-            </article>
+            <h3>Proces tworzenia ceramiki handmade</h3>
+            <p>
+                Używamy wyłącznie bezpiecznych dla żywności szkliw. Nasze <strong>miski ceramiczne dla psów</strong> są wypalane w temperaturze 1240°C, 
+                co gwarantuje ich trwałość i odporność na mycie w zmywarce. To idealny <strong>prezent dla miłośnika jamników</strong>, który szuka czegoś więcej niż masowej produkcji.
+            </p>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Sklep z Ceramiką Bolesławiecką. Wszelkie prawa zastrzeżone.</p>
+    <footer id="kontakt">
+        <div class="footer-content">
+            <h4>JamniczaArt - Pracownia Ceramiki</h4>
+            <address>
+                ul. Ceramiczna 10<br>
+                50-001 Wrocław<br>
+                Polska
+            </address>
+            <p>Tel: <a href="tel:+48123456789" style="color: #ccc;">+48 123 456 789</a></p>
+            <p>Email: <a href="mailto:sklep@jamniczaart.pl" style="color: #ccc;">sklep@jamniczaart.pl</a></p>
+            
+            <div style="margin-top: 20px;">
+                <a href="#" style="color: #aaa; margin: 0 10px;">Polityka Prywatności</a>
+                <a href="#" style="color: #aaa; margin: 0 10px;">Dostawa i Płatność</a>
+            </div>
+            
+            <p style="margin-top: 20px; font-size: 0.8rem;">&copy; 2023 JamniczaArt. Wszelkie prawa zastrzeżone.</p>
+        </div>
     </footer>
 
 </body>
