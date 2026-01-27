@@ -39,11 +39,12 @@
         "postalCode": "50-001",
         "addressCountry": "PL"
       },
+      "logo": "https://www.jamniczaart.pl/logo.png",
       "priceRange": "$$"
     }
     </script>
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60'%3E%3Cpath fill='%238D5524' d='M10 30c0-11 9-20 20-20h40c11 0 20 9 20 20S81 50 70 50H30C19 50 10 41 10 30z'/%3E%3Ccircle cx='25' cy='25' r='3' fill='%23Fdfbf7'/%3E%3Cpath fill='none' stroke='%23Fdfbf7' stroke-width='2' d='M25 35c2 2 6 2 8 0'/%3E%3Cpath fill='%238D5524' d='M8 25c-2 0-4 2-4 5s2 5 4 5 3-2 3-5-1-5-3-5zm84 0c-2 0-4 2-4 5s2 5 4 5 3-2 3-5-1-5-3-5z'/%3E%3C/svg%3E">
 
     <style>
         :root {
@@ -63,7 +64,7 @@
         header {
             background-color: #fff;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 1rem 0;
+            padding: 0.5rem 0; /* Mniejszy padding, bo logo jest wyższe */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -76,6 +77,23 @@
             align-items: center;
             padding: 0 20px;
         }
+        /* NOWE STYLE DLA LOGO */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+        .logo-img {
+            height: 50px;
+            width: auto;
+            margin-right: 10px;
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
@@ -119,10 +137,9 @@
         .product-card:hover {
             transform: translateY(-5px);
         }
-        /* Poprawka stylu dla zdjęć, aby lepiej wyglądały w kartach */
         .product-card img {
             width: 100%;
-            height: 300px; /* Zwiększona wysokość dla lepszej ekspozycji ceramiki */
+            height: 300px;
             object-fit: cover;
         }
         .product-info {
@@ -173,9 +190,13 @@
 
     <header>
         <nav>
-            <div class="logo">
-                <strong style="font-size: 1.5rem; color: var(--primary-color);">JamniczaArt</strong>
-            </div>
+            <a href="/" class="logo-container">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60'%3E%3Cpath fill='%238D5524' d='M10 30c0-11 9-20 20-20h40c11 0 20 9 20 20S81 50 70 50H30C19 50 10 41 10 30z'/%3E%3Ccircle cx='25' cy='25' r='3' fill='%23Fdfbf7'/%3E%3Cpath fill='none' stroke='%23Fdfbf7' stroke-width='2' d='M25 35c2 2 6 2 8 0'/%3E%3Cpath fill='%238D5524' d='M8 25c-2 0-4 2-4 5s2 5 4 5 3-2 3-5-1-5-3-5zm84 0c-2 0-4 2-4 5s2 5 4 5 3-2 3-5-1-5-3-5z'/%3E%3C/svg%3E" 
+                     alt="Logo JamniczaArt - stylizowany jamnik" 
+                     class="logo-img"
+                     width="83" height="50">
+                <span class="logo-text">JamniczaArt</span>
+            </a>
             <ul>
                 <li><a href="#sklep">Sklep</a></li>
                 <li><a href="#o-nas">O nas</a></li>
@@ -199,7 +220,7 @@
         
         <div class="products-grid">
             <article class="product-card">
-                <img src="https://img.kwcdn.com/product/fancy/0ba9a8a8-5c44-4dca-8881-b5898c434370.jpg?imageView2/2/w/800/q/70/format/avif" 
+                <img src="https://images.unsplash.com/photo-1577998474517-7eeeed4e4487?auto=format&fit=crop&w=500&q=80" 
                      alt="Ręcznie robiony kubek ceramiczny z malowanym motywem jamnika" 
                      width="500" height="300"
                      loading="lazy">
@@ -216,7 +237,7 @@
             </article>
 
             <article class="product-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEgiCyvqyCtb0AvhFE2BZmGejtYHjUevx4fA&s" 
+                <img src="https://images.unsplash.com/photo-1585846416120-3a7354ed7d65?auto=format&fit=crop&w=500&q=80" 
                      alt="Ciężka ceramiczna miska dla psa z grafiką jamnika" 
                      width="500" height="300"
                      loading="lazy">
@@ -233,7 +254,7 @@
             </article>
 
             <article class="product-card">
-                <img src="https://img.kwcdn.com/product/fancy/76538e60-9c31-4ef9-8135-55942993a5ee.jpg?imageView2/2/w/800/q/70/format/avif" 
+                <img src="https://images.unsplash.com/photo-1603197808584-7da49d391f2f?auto=format&fit=crop&w=500&q=80" 
                      alt="Ręcznie szkliwiony talerz ceramiczny z motywem jamnika długowłosego" 
                      width="500" height="300"
                      loading="lazy">
@@ -286,5 +307,3 @@
 
 </body>
 </html>
-
-
