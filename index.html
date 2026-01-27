@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Ceramika z Jamnikami - Ręcznie Robione Kubki i Miski | JamniczaArt</title>
-    
-    <meta name="description" content="Odkryj unikalną ceramikę z motywem jamnika. Ręcznie malowane kubki, miski i figurki. Polska produkcja handmade. Idealny prezent dla miłośnika psów. Sprawdź!">
-    
-    <meta name="keywords" content="ceramika z jamnikiem, kubek z jamnikiem, rękodzieło, prezent dla psiarza, ceramika handmade, miski dla psa">
+    <title>Ceramika z Jamnikami - Ręcznie Robione Kubki i Talerze | JamniczaArt</title>
+    <meta name="description" content="Odkryj unikalną ceramikę z motywem jamnika. Ręcznie malowane kubki, miski i talerze. Polska produkcja handmade. Idealny prezent dla miłośnika psów. Sprawdź!">
+    <meta name="keywords" content="ceramika z jamnikiem, kubek z jamnikiem, talerz z jamnikiem, rękodzieło, prezent dla psiarza, ceramika handmade">
     
     <link rel="canonical" href="https://www.jamniczaart.pl/">
 
     <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="Ceramika z Jamnikami | JamniczaArt">
-    <meta property="og:description" content="Najpiękniejsza ręcznie robiona ceramika dla fanów jamników. Zobacz naszą nową kolekcję!">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:title" content="Ceramika z Jamnikami | Kubki i Talerze Handmade">
+    <meta property="og:description" content="Najpiękniejsza ręcznie robiona ceramika dla fanów jamników. Zobacz naszą nową kolekcję kubków i talerzy!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1577998474517-7eeeed4e4487?auto=format&fit=crop&w=1200&q=80">
     <meta property="og:url" content="https://www.jamniczaart.pl/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pl_PL">
@@ -24,15 +22,15 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ceramika z Jamnikami | JamniczaArt">
     <meta name="twitter:description" content="Ręcznie robione kubki i talerze z motywem jamnika.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1200&q=80">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1577998474517-7eeeed4e4487?auto=format&fit=crop&w=1200&q=80">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Store",
       "name": "JamniczaArt",
-      "image": "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1200&q=80",
-      "description": "Sklep z ręcznie robioną ceramiką z motywem jamników.",
+      "image": "https://images.unsplash.com/photo-1577998474517-7eeeed4e4487?auto=format&fit=crop&w=1200&q=80",
+      "description": "Sklep z ręcznie robioną ceramiką (kubki, talerze) z motywem jamników.",
       "telephone": "+48 123 456 789",
       "address": {
         "@type": "PostalAddress",
@@ -49,7 +47,7 @@
 
     <style>
         :root {
-            --primary-color: #8D5524; /* Kolor jamniczy */
+            --primary-color: #8D5524;
             --secondary-color: #Fdfbf7;
             --text-color: #333;
             --accent-color: #C68642;
@@ -62,7 +60,6 @@
             color: var(--text-color);
             line-height: 1.6;
         }
-        /* Nawigacja */
         header {
             background-color: #fff;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -89,8 +86,6 @@
             color: var(--text-color);
             font-weight: 600;
         }
-        
-        /* Hero Section */
         .hero {
             background-color: var(--primary-color);
             color: white;
@@ -101,15 +96,11 @@
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
-        
-        /* Kontener główny */
         main {
             max-width: 1200px;
             margin: 2rem auto;
             padding: 0 20px;
         }
-
-        /* Produkty */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -122,17 +113,24 @@
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
         }
         .product-card:hover {
             transform: translateY(-5px);
         }
+        /* Poprawka stylu dla zdjęć, aby lepiej wyglądały w kartach */
         .product-card img {
             width: 100%;
-            height: 250px;
+            height: 300px; /* Zwiększona wysokość dla lepszej ekspozycji ceramiki */
             object-fit: cover;
         }
         .product-info {
             padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .product-info h3 {
             margin: 0 0 10px 0;
@@ -151,17 +149,14 @@
             text-decoration: none;
             border-radius: 5px;
             margin-top: 10px;
+            text-align: center;
         }
-
-        /* Sekcja SEO Text */
         .seo-content {
             margin-top: 4rem;
             background: #fff;
             padding: 2rem;
             border-radius: 8px;
         }
-
-        /* Footer */
         footer {
             background-color: #333;
             color: white;
@@ -190,8 +185,8 @@
     </header>
 
     <section class="hero">
-        <h1>Ręcznie Robiona Ceramika z Jamnikami</h1>
-        <p>Unikalne wzory dla miłośników długich psów i dobrej kawy.</p>
+        <h1>Ceramiczne Kubki i Talerze z Jamnikami</h1>
+        <p>Ręcznie toczone i malowane. Unikalne wzory dla miłośników długich psów.</p>
         <a href="#sklep" class="btn" style="background-color: white; color: var(--primary-color);">Zobacz kolekcję</a>
     </section>
 
@@ -204,44 +199,53 @@
         
         <div class="products-grid">
             <article class="product-card">
-                <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=500&q=80" 
-                     alt="Ceramiczny kubek w kolorze beżowym z ręcznie malowanym jamnikiem" 
-                     width="500" height="350"
+                <img src="https://images.unsplash.com/photo-1577998474517-7eeeed4e4487?auto=format&fit=crop&w=500&q=80" 
+                     alt="Ręcznie robiony kubek ceramiczny z malowanym motywem jamnika" 
+                     width="500" height="300"
                      loading="lazy">
                 <div class="product-info">
-                    <h3>Kubek "Długi Poranek"</h3>
-                    <p>Pojemny kubek 400ml, idealny na kawę. Motyw jamnika szorstkowłosego.</p>
-                    <span class="price">89,00 PLN</span>
-                    <br>
-                    <a href="#" class="btn">Dodaj do koszyka</a>
+                    <div>
+                        <h3>Kubek "Długi Poranek"</h3>
+                        <p>Pojemny kubek 400ml z unikalnym, ręcznie malowanym jamnikiem.</p>
+                    </div>
+                    <div>
+                        <span class="price">89,00 PLN</span>
+                        <a href="#" class="btn" style="width: 100%; box-sizing: border-box;">Dodaj do koszyka</a>
+                    </div>
                 </div>
             </article>
 
             <article class="product-card">
-                <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=500&q=80" 
-                     alt="Ceramiczna miska dla psa z napisem i grafiką jamnika" 
-                     width="500" height="350"
+                <img src="https://images.unsplash.com/photo-1585846416120-3a7354ed7d65?auto=format&fit=crop&w=500&q=80" 
+                     alt="Ciężka ceramiczna miska dla psa z grafiką jamnika" 
+                     width="500" height="300"
                      loading="lazy">
                 <div class="product-info">
-                    <h3>Miska "Jamniczy Apetyt"</h3>
-                    <p>Stabilna, ciężka miska ceramiczna dla psa. Łatwa do mycia.</p>
-                    <span class="price">65,00 PLN</span>
-                    <br>
-                    <a href="#" class="btn">Dodaj do koszyka</a>
+                    <div>
+                        <h3>Miska "Jamniczy Apetyt"</h3>
+                        <p>Stabilna miska ceramiczna dla Twojego jamnika. Łatwa do mycia.</p>
+                    </div>
+                    <div>
+                        <span class="price">65,00 PLN</span>
+                        <a href="#" class="btn" style="width: 100%; box-sizing: border-box;">Dodaj do koszyka</a>
+                    </div>
                 </div>
             </article>
 
             <article class="product-card">
-                <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=500&q=80" 
-                     alt="Zestaw talerzy ceramicznych z motywem jamnika długowłosego" 
-                     width="500" height="350"
+                <img src="https://images.unsplash.com/photo-1603197808584-7da49d391f2f?auto=format&fit=crop&w=500&q=80" 
+                     alt="Ręcznie szkliwiony talerz ceramiczny z motywem jamnika długowłosego" 
+                     width="500" height="300"
                      loading="lazy">
                 <div class="product-info">
-                    <h3>Talerzyk Deserowy "Sausage Dog"</h3>
-                    <p>Idealny talerzyk na ciasto. Ręcznie szkliwiony.</p>
-                    <span class="price">45,00 PLN</span>
-                    <br>
-                    <a href="#" class="btn">Dodaj do koszyka</a>
+                    <div>
+                        <h3>Talerz "Sausage Dog"</h3>
+                        <p>Deserowy talerzyk ceramiczny. Idealny na ciasto.</p>
+                    </div>
+                    <div>
+                        <span class="price">45,00 PLN</span>
+                        <a href="#" class="btn" style="width: 100%; box-sizing: border-box;">Dodaj do koszyka</a>
+                    </div>
                 </div>
             </article>
         </div>
@@ -249,13 +253,13 @@
         <section class="seo-content" id="o-nas">
             <h2>Dlaczego warto wybrać naszą ceramikę z jamnikami?</h2>
             <p>
-                Nasza pracownia <strong>Jamnicza Ceramika</strong> to miejsce, gdzie miłość do gliny łączy się z pasją do psów. 
-                Każdy <em>kubek z jamnikiem</em> jest toczony na kole garncarskim, a następnie ręcznie malowany, co sprawia, że nie ma dwóch identycznych produktów.
+                Nasza pracownia <strong>Jamnicza Ceramika</strong> to miejsce, gdzie pasja do rzemiosła łączy się z miłością do psów. 
+                Każdy <em>kubek z jamnikiem</em> i <em>talerz ceramiczny</em> jest toczony na kole i ręcznie zdobiony, co sprawia, że nie ma dwóch identycznych produktów.
             </p>
             <h3>Proces tworzenia ceramiki handmade</h3>
             <p>
-                Używamy wyłącznie bezpiecznych dla żywności szkliw. Nasze <strong>miski ceramiczne dla psów</strong> są wypalane w temperaturze 1240°C, 
-                co gwarantuje ich trwałość i odporność na mycie w zmywarce. To idealny <strong>prezent dla miłośnika jamników</strong>, który szuka czegoś więcej niż masowej produkcji.
+                Używamy bezpiecznych dla żywności szkliw. Nasze wyroby, w tym <strong>miski dla psów</strong>, są wypalane w wysokiej temperaturze (1240°C), 
+                co gwarantuje ich trwałość. To idealny <strong>prezent dla miłośnika jamników</strong>, który docenia unikalne rękodzieło.
             </p>
         </section>
     </main>
