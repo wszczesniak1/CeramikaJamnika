@@ -110,11 +110,8 @@
             text-align: center;
             padding: 4rem 1rem;
             position: relative;
-            
             background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdBfr_lwyAIYofc4N_DZ_-4yN-kQLbha2bdg&s");
-            
             background-blend-mode: multiply;
-            
             background-size: 300px auto;
             background-repeat: repeat;
         }
@@ -190,15 +187,92 @@
             padding: 2rem;
             border-radius: 8px;
         }
+        
+        /* NOWE STYLE DLA OPINII */
+        .reviews-section {
+            margin-top: 4rem;
+        }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .review-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent-color);
+        }
+        .stars {
+            color: #FFD700; /* Złoty kolor gwiazdek */
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .client-name {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        /* NOWE STYLE DLA STOPKI I MAPY */
         footer {
             background-color: #333;
             color: white;
-            text-align: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
             margin-top: 4rem;
         }
-        .footer-content p {
-            margin: 5px 0;
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap; /* Zawijanie na mniejszych ekranach */
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+        .footer-info, .footer-map {
+            flex: 1;
+            min-width: 300px; /* Minimalna szerokość kolumny */
+        }
+        .footer-info {
+            text-align: left;
+        }
+        .footer-info h4 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: white;
+        }
+        .footer-map iframe {
+            width: 100%;
+            height: 250px;
+            border: 0;
+            border-radius: 8px;
+            filter: grayscale(20%); /* Lekkie poszarzenie mapy dla stylu */
+        }
+
+        /* Responsywność stopki dla małych ekranów */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-info {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -215,7 +289,7 @@
             </a>
             <ul>
                 <li><a href="#sklep">Sklep</a></li>
-                <li><a href="#o-nas">O nas</a></li>
+                <li><a href="#opinie">Opinie</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
         </nav>
@@ -299,29 +373,60 @@
                 co gwarantuje ich trwałość. To idealny <strong>prezent dla miłośnika jamników</strong>, który docenia unikalne rękodzieło.
             </p>
         </section>
+
+        <section class="reviews-section" id="opinie">
+            <h2 style="text-align: center; color: var(--primary-color);">Zadowoleni Klienci</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Kubek jest absolutnie przepiękny! Mój jamnik Tofik od razu go zaakceptował (choć kawa była dla mnie). Wykonanie na najwyższym poziomie."</p>
+                    <span class="client-name">Anna K. z Krakowa</span>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Kupiłem miskę na prezent dla żony. Jest bardzo solidna i ciężka, pies w końcu nie jeździ nią po całej kuchni. Szybka wysyłka!"</p>
+                    <span class="client-name">Tomasz N. z Gdańska</span>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Talerzyki deserowe zrobiły furorę na rodzinnym spotkaniu. Każdy pytał, skąd je mam. Polecam każdemu miłośnikowi jamników!"</p>
+                    <span class="client-name">Katarzyna W. z Warszawy</span>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer id="kontakt">
-        <div class="footer-content">
-            <h4>CeramikaJamnika - Pracownia Ceramiki</h4>
-            <address>
-                ul. Ceramiczna 10<br>
-                50-001 Wrocław<br>
-                Polska
-            </address>
-            <p>Tel: <a href="tel:+48123456789" style="color: #ccc;">+48 123 456 789</a></p>
-            <p>Email: <a href="mailto:sklep@ceramikajamnika.pl" style="color: #ccc;">sklep@ceramikajamnika.pl</a></p>
-            
-            <div style="margin-top: 20px;">
-                <a href="#" style="color: #aaa; margin: 0 10px;">Polityka Prywatności</a>
-                <a href="#" style="color: #aaa; margin: 0 10px;">Dostawa i Płatność</a>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h4>CeramikaJamnika</h4>
+                <address>
+                    ul. Ceramiczna 10<br>
+                    50-001 Wrocław<br>
+                    Polska
+                </address>
+                <p>Tel: <a href="tel:+48123456789" style="color: #ccc;">+48 123 456 789</a></p>
+                <p>Email: <a href="mailto:sklep@ceramikajamnika.pl" style="color: #ccc;">sklep@ceramikajamnika.pl</a></p>
+                
+                <div class="footer-links" style="margin-top: 20px;">
+                    <a href="#">Polityka Prywatności</a>
+                    <a href="#">Dostawa i Płatność</a>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.8rem; color: #aaa;">&copy; 2023 JamniczaArt. Wszelkie prawa zastrzeżone.</p>
             </div>
-            
-            <p style="margin-top: 20px; font-size: 0.8rem;">&copy; 2023 JamniczaArt. Wszelkie prawa zastrzeżone.</p>
+
+            <div class="footer-map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.4663876023616!2d17.038538!3d51.107885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fe9c4d22738b5%3A0x1b726662492c4767!2sWroc%C5%82aw!5e0!3m2!1spl!2spl!4v1620000000000!5m2!1spl!2spl" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Mapa dojazdu do CeramikaJamnika">
+                </iframe>
+            </div>
         </div>
     </footer>
 
 </body>
 </html>
-
-
