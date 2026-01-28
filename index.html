@@ -271,6 +271,55 @@
                 text-align: center;
             }
         }
+
+        /* --- NOWE STYLE DLA SEKCJI FAQ (DODANE) --- */
+        .faq-section {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 20px;
+        }
+        .faq-section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+        details {
+            background: #fff;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        summary {
+            padding: 1.2rem;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary-color);
+            position: relative;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: normal;
+            transition: transform 0.3s;
+        }
+        details[open] summary::after {
+            transform: rotate(45deg);
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        details p {
+            padding: 0 1.2rem 1.2rem 1.2rem;
+            margin: 0;
+            color: #555;
+            line-height: 1.6;
+            border-top: 1px solid #f0f0f0;
+        }
     </style>
 </head>
 <body>
@@ -393,6 +442,56 @@
             </div>
         </section>
 
+        <section class="faq-section" id="faq" itemscope itemtype="https://schema.org/FAQPage">
+            <h2>Pytania i Odpowiedzi (Q&A)</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #666;">Wszystko, co musisz wiedzieć o naszej jamniczej ceramice.</p>
+
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details>
+                    <summary itemprop="name">Czy ceramikę z jamnikami można myć w zmywarce?</summary>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Tak, wszystkie nasze kubki, miski i talerze są wypalane w temperaturze 1240°C. Są w pełni odporne na mycie w zmywarce oraz używanie w kuchence mikrofalowej. Wzory nie zmywają się ani nie blakną.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details>
+                    <summary itemprop="name">Czy szkliwa są bezpieczne dla żywności i zwierząt?</summary>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Absolutnie tak. W pracowni CeramikaJamnika używamy wyłącznie certyfikowanych szkliw dopuszczonych do kontaktu z żywnością. Nasze miski dla psów są bezpieczne i nie wchodzą w reakcje z karmą czy wodą.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details>
+                    <summary itemprop="name">Jak długo trwa realizacja zamówienia?</summary>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Produkty dostępne "od ręki" wysyłamy w ciągu 24-48 godzin. W przypadku zamówień indywidualnych (np. kubek z imieniem Twojego jamnika), czas realizacji wynosi zazwyczaj od 7 do 14 dni roboczych ze względu na proces schnięcia i wypału.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details>
+                    <summary itemprop="name">Czy wysyłka ceramiki jest bezpieczna?</summary>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Mamy w tym duże doświadczenie. Każdy produkt pakujemy "pancernie" – używamy ekologicznych wypełniaczy, tektury falistej i solidnych pudełek. Jeśli mimo to przesyłka dotrze uszkodzona, natychmiast wyślemy nowy produkt lub zwrócimy pieniądze.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <details>
+                    <summary itemprop="name">Czy wykonujecie ceramikę z innymi rasami psów?</summary>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Naszą specjalnością są jamniki (krótko-, szorstko- i długowłose), ale na specjalne zamówienie możemy wykonać kubek z podobizną innego psa. Skontaktuj się z nami mailowo, aby ustalić szczegóły!</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
     </main>
 
     <footer id="kontakt">
@@ -428,6 +527,3 @@
 
 </body>
 </html>
-
-
-
