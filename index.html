@@ -61,7 +61,6 @@
             color: var(--text-color);
             line-height: 1.6;
         }
-        /* HEADER I NAV */
         header {
             background-color: #fff;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -105,7 +104,6 @@
             font-weight: 600;
         }
         
-        /* HERO SECTION */
         .hero {
             background-color: var(--primary-color);
             color: white;
@@ -129,14 +127,11 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
 
-        /* MAIN LAYOUT */
         main {
             max-width: 1200px;
             margin: 2rem auto;
             padding: 0 20px;
         }
-        
-        /* PRODUKTY */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -186,42 +181,15 @@
             margin-top: 10px;
             text-align: center;
         }
-
-        /* NOWA SEKCJA O NAS (ZMODYFIKOWANA) */
-        .about-section {
-            margin-top: 5rem;
+        .seo-content {
+            margin-top: 4rem;
             background: #fff;
-            padding: 0; /* Padding usunięty z kontenera, aby zdjęcie dochodziło do krawędzi wewnątrz */
+            padding: 2rem;
             border-radius: 8px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-        .about-content {
-            flex: 1;
-            padding: 3rem;
-        }
-        .about-image {
-            flex: 1;
-            height: 100%;
-            min-height: 400px;
-            object-fit: cover;
-        }
-        /* Responsywność dla sekcji O Nas */
-        @media (max-width: 768px) {
-            .about-section {
-                flex-direction: column-reverse;
-            }
-            .about-image {
-                width: 100%;
-                min-height: 250px;
-            }
         }
         
-        /* SEKCJA OPINII */
         .reviews-section {
-            margin-top: 5rem;
+            margin-top: 4rem;
         }
         .reviews-grid {
             display: grid;
@@ -237,7 +205,7 @@
             border-left: 4px solid var(--accent-color);
         }
         .stars {
-            color: #FFD700; 
+            color: #FFD700;
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
         }
@@ -249,7 +217,6 @@
             font-size: 0.9rem;
         }
 
-        /* STOPKA */
         footer {
             background-color: #333;
             color: white;
@@ -261,14 +228,14 @@
             margin: 0 auto;
             padding: 0 20px;
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
             gap: 2rem;
         }
         .footer-info, .footer-map {
             flex: 1;
-            min-width: 300px; 
+            min-width: 300px;
         }
         .footer-info {
             text-align: left;
@@ -292,8 +259,9 @@
             height: 250px;
             border: 0;
             border-radius: 8px;
-            filter: grayscale(20%); 
+            filter: grayscale(20%);
         }
+
         @media (max-width: 768px) {
             .footer-container {
                 flex-direction: column;
@@ -391,24 +359,17 @@
             </article>
         </div>
 
-        <section class="about-section" id="o-nas">
-            <div class="about-content">
-                <h2 style="color: var(--primary-color);">O naszej pracowni</h2>
-                <p>
-                    <strong>CeramikaJamnika</strong> to miejsce, gdzie pasja do gliny spotyka się z bezgraniczną miłością do najdłuższych psów na świecie.
-                </p>
-                <p>
-                    Nasza przygoda zaczęła się od Tofika – naszego szorstkowłosego jamnika, który uwielbiał asystować przy kole garncarskim. To on stał się inspiracją dla naszych pierwszych kubków.
-                </p>
-                <p>
-                    Każdy produkt jest toczony ręcznie we Wrocławiu. Używamy gliny kamionkowej wypalanej w temperaturze 1240°C, co sprawia, że nasze naczynia są nie tylko piękne, ale i niezwykle trwałe.
-                </p>
-                <a href="#kontakt" style="color: var(--accent-color); font-weight: bold; text-decoration: none;">Dowiedz się więcej o procesie &rarr;</a>
-            </div>
-            <img src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=800&q=80" 
-                 alt="Pracownia ceramiczna, ręczne formowanie gliny" 
-                 class="about-image"
-                 loading="lazy">
+        <section class="seo-content" id="o-nas">
+            <h2>Dlaczego warto wybrać naszą ceramikę z jamnikami?</h2>
+            <p>
+                Nasza pracownia <strong>Jamnicza Ceramika</strong> to miejsce, gdzie pasja do rzemiosła łączy się z miłością do psów. 
+                Każdy <em>kubek z jamnikiem</em> i <em>talerz ceramiczny</em> jest toczony na kole i ręcznie zdobiony, co sprawia, że nie ma dwóch identycznych produktów.
+            </p>
+            <h3>Proces tworzenia ceramiki handmade</h3>
+            <p>
+                Używamy bezpiecznych dla żywności szkliw. Nasze wyroby, w tym <strong>miski dla psów</strong>, są wypalane w wysokiej temperaturze (1240°C), 
+                co gwarantuje ich trwałość. To idealny <strong>prezent dla miłośnika jamników</strong>, który docenia unikalne rękodzieło.
+            </p>
         </section>
 
         <section class="reviews-section" id="opinie">
@@ -455,7 +416,7 @@
 
             <div class="footer-map">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.4663876023616!2d17.038538!3d51.107885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fe9c4d22738b5%3A0x1b726662492c4767!2sWroc%C5%82aw!5e0!3m2!1spl!2spl!4v1620000000000!5m2!1spl!2spl" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.0000000000005!2d17.0385!3d51.1079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDA2JzI4LjQiTiAxN8KwMDInMTguNiJF!5e0!3m2!1spl!2spl!4v1600000000000!5m2!1spl!2spl" 
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade"
