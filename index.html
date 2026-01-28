@@ -61,6 +61,7 @@
             color: var(--text-color);
             line-height: 1.6;
         }
+        /* HEADER I NAV */
         header {
             background-color: #fff;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -104,6 +105,7 @@
             font-weight: 600;
         }
         
+        /* HERO SECTION */
         .hero {
             background-color: var(--primary-color);
             color: white;
@@ -127,11 +129,14 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
 
+        /* MAIN LAYOUT */
         main {
             max-width: 1200px;
             margin: 2rem auto;
             padding: 0 20px;
         }
+        
+        /* PRODUKTY */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -181,16 +186,42 @@
             margin-top: 10px;
             text-align: center;
         }
-        .seo-content {
-            margin-top: 4rem;
+
+        /* NOWA SEKCJA O NAS (ZMODYFIKOWANA) */
+        .about-section {
+            margin-top: 5rem;
             background: #fff;
-            padding: 2rem;
+            padding: 0; /* Padding usunięty z kontenera, aby zdjęcie dochodziło do krawędzi wewnątrz */
             border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .about-content {
+            flex: 1;
+            padding: 3rem;
+        }
+        .about-image {
+            flex: 1;
+            height: 100%;
+            min-height: 400px;
+            object-fit: cover;
+        }
+        /* Responsywność dla sekcji O Nas */
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column-reverse;
+            }
+            .about-image {
+                width: 100%;
+                min-height: 250px;
+            }
         }
         
-        /* NOWE STYLE DLA OPINII */
+        /* SEKCJA OPINII */
         .reviews-section {
-            margin-top: 4rem;
+            margin-top: 5rem;
         }
         .reviews-grid {
             display: grid;
@@ -206,7 +237,7 @@
             border-left: 4px solid var(--accent-color);
         }
         .stars {
-            color: #FFD700; /* Złoty kolor gwiazdek */
+            color: #FFD700; 
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
         }
@@ -218,7 +249,7 @@
             font-size: 0.9rem;
         }
 
-        /* NOWE STYLE DLA STOPKI I MAPY */
+        /* STOPKA */
         footer {
             background-color: #333;
             color: white;
@@ -230,14 +261,14 @@
             margin: 0 auto;
             padding: 0 20px;
             display: flex;
-            flex-wrap: wrap; /* Zawijanie na mniejszych ekranach */
+            flex-wrap: wrap; 
             justify-content: space-between;
             align-items: center;
             gap: 2rem;
         }
         .footer-info, .footer-map {
             flex: 1;
-            min-width: 300px; /* Minimalna szerokość kolumny */
+            min-width: 300px; 
         }
         .footer-info {
             text-align: left;
@@ -261,10 +292,8 @@
             height: 250px;
             border: 0;
             border-radius: 8px;
-            filter: grayscale(20%); /* Lekkie poszarzenie mapy dla stylu */
+            filter: grayscale(20%); 
         }
-
-        /* Responsywność stopki dla małych ekranów */
         @media (max-width: 768px) {
             .footer-container {
                 flex-direction: column;
@@ -289,6 +318,7 @@
             </a>
             <ul>
                 <li><a href="#sklep">Sklep</a></li>
+                <li><a href="#o-nas">O nas</a></li>
                 <li><a href="#opinie">Opinie</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
@@ -361,17 +391,24 @@
             </article>
         </div>
 
-        <section class="seo-content" id="o-nas">
-            <h2>Dlaczego warto wybrać naszą ceramikę z jamnikami?</h2>
-            <p>
-                Nasza pracownia <strong>Jamnicza Ceramika</strong> to miejsce, gdzie pasja do rzemiosła łączy się z miłością do psów. 
-                Każdy <em>kubek z jamnikiem</em> i <em>talerz ceramiczny</em> jest toczony na kole i ręcznie zdobiony, co sprawia, że nie ma dwóch identycznych produktów.
-            </p>
-            <h3>Proces tworzenia ceramiki handmade</h3>
-            <p>
-                Używamy bezpiecznych dla żywności szkliw. Nasze wyroby, w tym <strong>miski dla psów</strong>, są wypalane w wysokiej temperaturze (1240°C), 
-                co gwarantuje ich trwałość. To idealny <strong>prezent dla miłośnika jamników</strong>, który docenia unikalne rękodzieło.
-            </p>
+        <section class="about-section" id="o-nas">
+            <div class="about-content">
+                <h2 style="color: var(--primary-color);">O naszej pracowni</h2>
+                <p>
+                    <strong>CeramikaJamnika</strong> to miejsce, gdzie pasja do gliny spotyka się z bezgraniczną miłością do najdłuższych psów na świecie.
+                </p>
+                <p>
+                    Nasza przygoda zaczęła się od Tofika – naszego szorstkowłosego jamnika, który uwielbiał asystować przy kole garncarskim. To on stał się inspiracją dla naszych pierwszych kubków.
+                </p>
+                <p>
+                    Każdy produkt jest toczony ręcznie we Wrocławiu. Używamy gliny kamionkowej wypalanej w temperaturze 1240°C, co sprawia, że nasze naczynia są nie tylko piękne, ale i niezwykle trwałe.
+                </p>
+                <a href="#kontakt" style="color: var(--accent-color); font-weight: bold; text-decoration: none;">Dowiedz się więcej o procesie &rarr;</a>
+            </div>
+            <img src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&fit=crop&w=800&q=80" 
+                 alt="Pracownia ceramiczna, ręczne formowanie gliny" 
+                 class="about-image"
+                 loading="lazy">
         </section>
 
         <section class="reviews-section" id="opinie">
@@ -413,7 +450,7 @@
                     <a href="#">Polityka Prywatności</a>
                     <a href="#">Dostawa i Płatność</a>
                 </div>
-                <p style="margin-top: 20px; font-size: 0.8rem; color: #aaa;">&copy; 2023 JamniczaArt. Wszelkie prawa zastrzeżone.</p>
+                <p style="margin-top: 20px; font-size: 0.8rem; color: #aaa;">© 2023 JamniczaArt. Wszelkie prawa zastrzeżone.</p>
             </div>
 
             <div class="footer-map">
